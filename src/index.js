@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 
 const validate = () => {
-  let answer = prompt("please enter when we met", "zzz");
-  if(answer==="918") {
+  let answer = prompt("when did this couple first meet?", "mmmmdd");
+  if (answer === "aug18") {
     ReactDOM.render(
       <React.StrictMode>
         <App />
@@ -13,8 +13,8 @@ const validate = () => {
       document.getElementById('root')
     );
   }
-  else{
-    alert("denied");
+  else {
+    alert("incorrect - refresh to try again");
   }
 }
 validate();

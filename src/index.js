@@ -4,18 +4,16 @@ import './index.css';
 import App from './App';
 
 const validate = () => {
-  let answer = prompt("when did this couple first meet?", "mmmmdd");
-  if (answer === "aug18") {
-    ReactDOM.render(
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>,
-      document.getElementById('root')
-    );
-  }
-  else {
-    alert("incorrect - refresh to try again");
-  }
+  let answer = '';
+  do {
+    answer = prompt("when did this couple first meet?", "mmmmdd");
+  } while (answer !== "aug18");
+  ReactDOM.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
 }
 validate();
 
